@@ -11,7 +11,7 @@ const Votes = ({postId}) => {
     
     const { data } = useMoralisQuery("Votes", (query) => query.equalTo("postId", postId), [], { live: true });
     const options = {
-        contractAddress: contractAddress,
+        contractAddress: "0x3d115aF63DE1ECBc8521e25d8CbD3da500dB96c0",
         functionName: "getPost",
         abi: contractABIJson,
         params: {

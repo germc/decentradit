@@ -16,7 +16,7 @@ const Reputation = () => {
     const categoryId = selectedCategory["categoryId"]
 
     const options = {
-        contractAddress: contractAddress,
+            contractAddress: "0x3d115aF63DE1ECBc8521e25d8CbD3da500dB96c0",
         functionName: "getReputation",
         abi: contractABIJson,
         params: {

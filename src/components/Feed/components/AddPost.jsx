@@ -16,7 +16,7 @@ const AddPost = () => {
         const contentUri = await processContent(post); 
         const categoryId = selectedCategory["categoryId"];
         const options = {
-            contractAddress: contractAddress,
+            contractAddress: "0x3d115aF63DE1ECBc8521e25d8CbD3da500dB96c0",
             functionName: "createPost",
             abi: contractABIJson,
             params: {
@@ -68,14 +68,14 @@ const AddPost = () => {
                 <input
                 type="text"
                 className="mb-2 mt-2 form-control"
-                placeholder="Title"
+                placeholder="Key result task title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 />
                 <textarea
                 type='text'
                 className="mb-2 form-control"
-                placeholder="Post away"
+                placeholder="Enter details about the key result. Be as specific as possible as this will affect your reward from your manager."
                 rows="5"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}

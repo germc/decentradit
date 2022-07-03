@@ -62,7 +62,7 @@ const Post = ({post}) => {
         if (walletAddress.toLowerCase() === postOwner.toLowerCase()) return message.error("You cannot vote on your posts");
         if (voteStatus) return message.error("Already voted");
         const options = {
-            contractAddress: contractAddress,
+            contractAddress: "0x3d115aF63DE1ECBc8521e25d8CbD3da500dB96c0",
             functionName: direction,
             abi: contractABIJson,
             params: {
@@ -78,21 +78,21 @@ const Post = ({post}) => {
     }
     
     const actions = [
-    <Tooltip key="comment-basic-like" title="Vote Up">
+    <Tooltip key="comment-basic-like" title="Get with your manager when you have completed this key result to get approval. Rewards are given per key result achieved.">
         <span
         style={{ fontSize: "15px", display: "flex", alignItems: "center", marginRight: "16px" }}
         onClick={() => vote("voteUp")}
         >
-        {createElement(voteStatus === "liked" ? LikeFilled : LikeOutlined)} Vote Up
+        {createElement(voteStatus === "liked" ? LikeFilled : LikeOutlined)} Approve this key result completed (Manager)
         </span>
     </Tooltip>,
     <span style={{ fontSize: "15px" }}><Votes postId={postId}/></span>,
-    <Tooltip key="comment-basic-dislike" title="Dislike">
+    <Tooltip key="comment-basic-dislike" title="Award $UBXx for key result achieved. (Manager)">
         <span
         style={{ fontSize: "15px", display: "flex", alignItems: "center", marginLeft: "8px" }}
         onClick={() => vote("voteDown")}
         >
-        {createElement(voteStatus === "disliked" ? DislikeFilled : DislikeOutlined)} Vote Down
+        {createElement(voteStatus === "disliked" ? DislikeFilled : DislikeOutlined)} Award $UBXx for key result completed (Manager)
         </span>
     </Tooltip>,
     ];  

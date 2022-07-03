@@ -21,7 +21,7 @@ const Feed = () => {
     if (selectedCategory["category"] === "default") {
         result = (
           <div className="col-lg-9">
-            <h3>Choose a Category</h3>
+            <h3>Choose an OKR from the menu</h3>
           </div>
         );
       }
@@ -38,7 +38,7 @@ const Feed = () => {
                 }}
             >
                 <Avatar src={<Blockie currentWallet />} />
-                <h4> Your Reputation in {selectedCategory["category"]} is <Reputation/> </h4>
+                <h4> You have completed <Reputation/> key results in {selectedCategory["category"]}</h4>
                 <Button shape="round" onClick={toogleShowAddPost}>
                     Post
                 </Button>
